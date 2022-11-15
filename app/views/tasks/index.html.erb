@@ -1,7 +1,8 @@
 <h1>My tasks</h1>
 <ul>
   <% @tasks.each do |task| %>
-    <li><%= link_to "#{task.title} - Completed: #{task.completed}", task_path(task.id) %></li>
+    <li><%= link_to "#{task.title} - Completed: #{task.completed}", task_path(task.id) %> -
+    <%= link_to "delete", task_path(task), data: {turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this task?"} %></li>
   <% end %>
 </ul>
 <br>

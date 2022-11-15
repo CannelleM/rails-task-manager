@@ -4,7 +4,10 @@
   <%= f.text_field :title %>
   <%= f.label :details %>
   <%= f.text_field :details %>
+  <%= f.label :completed, "Done?" %>
+  <%= f.check_box :completed %>
   <%= f.submit "Edit task" %>
 <% end %>
 <br>
 <%= link_to "Back to tasks list", tasks_path %>
+
